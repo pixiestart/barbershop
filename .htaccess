@@ -1,0 +1,24 @@
+#Complete .HTACCESS CONFIG
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+
+    #RewriteRule ^(([a-z0-9\-]+/)\/[a-z0-9\-]+)$ $1/ [NC,R=301,L]
+    RewriteRule ^([a-z0-9]+)\/([a-z0-9]+)\/?$ index.php?param=$1&param2=$2 [NC]
+    RewriteRule ^([a-z0-9]+)\/?$ index.php?param=$1 [NC]
+    RewriteRule ^([a-z0-9_]+)\/?$ index.php?param=$1 [NC]
+    RewriteRule ^([a-z0-9]+)\/?$ $1.php [NC]
+    
+    #Default Error Page
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule .* 404.php [L]
+
+    # Give Hotlinkers a 403 Forbidden warning.
+    RewriteCond %{HTTP_REFERER} !^http://barbershop\.net/?.*$ [NC]
+    RewriteCond %{HTTP_REFERER} !^http://barbershop\.com/?.*$ [NC]
+    RewriteRule \.(gif|jpe?g|png|bmp|js|css)$ - [F,NC]
+
+    # Always remove www (with a hard redirect)
+    RewriteCond %{HTTP_HOST} ^www\.barbershop\.com$ [NC]
+    RewriteRule ^(.*)$ http://barbershop.com/$1 [R=301,L]
+</IfModule>
