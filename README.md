@@ -1,2 +1,2 @@
 # barbershop
-This is barbershop project.
+This is barbershop project (kingsley Branch).
