@@ -16,7 +16,7 @@ include '../connection/connection.php';
 class SetModel {
 
     public function __construct() {
-        // In here you could initialize some shared logic between this API and rest of the projects
+        // In here you could initialize some shared logic between this API and rest of the project
     }
 
     function setRecord($query) {
