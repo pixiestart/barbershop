@@ -12,7 +12,7 @@ and open the template in the editor.
     </head>
     <body>
         <?php
-        include'./controller/Controller.php';
+        include'../controller/Controller.php';
         $controller = new Controller();
 
         if (isset($_GET['param'])) {

@@ -11,7 +11,7 @@
  *
  * @author Pixie3
  */
-include './connection/connection.php';
+include '../connection/connection.php';
 
 class GetModel {
 

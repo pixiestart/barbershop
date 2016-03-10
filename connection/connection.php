@@ -15,5 +15,5 @@ $database = "barbershop_db";
 $connect = mysql_connect($servername, $username, $password);
 mysql_select_db($database);
 if(!$connect){
-    die("<b>Could not connect at this time. Please try again later!" . mysql_error());
+    die("<b>Could not connect at this time. Please try again later!</b>" . mysql_error());
 }

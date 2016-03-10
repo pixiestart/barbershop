@@ -11,8 +11,8 @@
  *
  * @author Pixie3
  */
-require './model/GetModel.php';
-require './model/SetModel.php';
+require '../model/GetModel.php';
+require '../model/SetModel.php';
 
 class Controller {
 
